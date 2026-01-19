@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moon Phase Simulation</title>
+  <script type="module" crossorigin src="./assets/index-B0-qa05s.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Dq5G2_nm.css">
+</head>
+
+<body>
+  <div id="ui-container">
+    <div id="controls">
+      <button id="pause-btn">일시정지</button>
+      <div class="slider-container">
+        <label for="speed-slider">속도:</label>
+        <input type="range" id="speed-slider" min="0" max="100" value="10">
+      </div>
+      <div class="date-container">
+        <input type="date" id="date-input">
+        <button id="set-date-btn">날짜 보기</button>
+      </div>
+    </div>
+    <div id="info">
+      <h2>달의 위상: <span id="phase-name">...</span></h2>
+      <div id="phase-view-container">
+        <canvas id="phase-canvas"></canvas>
+        <div class="label">지구에서 본 모습 (북반구/대한민국)</div>
+      </div>
+    </div>
+
+    <div id="bottom-controls">
+      <label for="orbit-slider" style="color:white; font-size:1.2em; display:block; margin-bottom:10px;">지구의 공전 (1년
+        여행)</label>
+      <input type="range" id="orbit-slider" min="0" max="365" value="0" step="0.1">
+    </div>
+  </div>
+  <div id="canvas-container"></div>
+</body>
+
+</html>
