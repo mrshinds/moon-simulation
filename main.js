@@ -123,7 +123,7 @@ function initPhaseScene() {
     const textureLoader = new THREE.TextureLoader();
     const moonGeo = new THREE.SphereGeometry(1, 64, 64);
     const moonMat = new THREE.MeshStandardMaterial({
-        map: textureLoader.load('/moon.jpg'),
+        map: textureLoader.load('./moon.jpg'),
         roughness: 0.9,
         metalness: 0
     });
@@ -151,7 +151,7 @@ function createObjects() {
     // Sun
     const sunGeo = new THREE.SphereGeometry(SUN_RADIUS, 64, 64);
     const sunMat = new THREE.MeshBasicMaterial({
-        map: textureLoader.load('/sun.jpg')
+        map: textureLoader.load('./sun.jpg')
     });
     sunMesh = new THREE.Mesh(sunGeo, sunMat);
     scene.add(sunMesh);
@@ -185,7 +185,7 @@ function createObjects() {
     // Earth (Spins around Y axis of the Tilted Group)
     const earthGeo = new THREE.SphereGeometry(EARTH_RADIUS, 64, 64);
     const earthMat = new THREE.MeshStandardMaterial({
-        map: textureLoader.load('/earth.jpg'),
+        map: textureLoader.load('./earth.jpg'),
         roughness: 0.5,
         metalness: 0.1
     });
@@ -209,7 +209,7 @@ function createObjects() {
     // Moon
     const moonGeo = new THREE.SphereGeometry(MOON_RADIUS, 64, 64);
     const moonMat = new THREE.MeshStandardMaterial({
-        map: textureLoader.load('/moon.jpg'),
+        map: textureLoader.load('./moon.jpg'),
         roughness: 0.9,
         metalness: 0
     });
